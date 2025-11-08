@@ -82,13 +82,10 @@ Our approach is to link disease data (like dengue or leptospirosis) with climate
 							</section>
 						</div>
 					</div>
-					<footer>
-						<!-- <p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p> -->
-						<!-- <a href="#portfolio" class="button large scrolly">Let's take a look at our data</a> -->
-						<a href="https://docs.google.com/document/d/179ec5I5OqAGAQnvkS9UhoC17WVqL8eYUd7pW2WOFq24/edit?usp=sharing" class="button large scrolly">Data Collection Document</a>
-						<a href="https://docs.google.com/spreadsheets/d/1LZMMTknEvpRO67PXNyf2QjoW_Wz7-0l1hAPqaVsKCUY/edit?usp=sharing" class="button large scrolly">Data Google Sheets</a>
-
-					</footer>
+					<!-- <footer>
+						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
+						<a href="#portfolio" class="button large scrolly">Let's take a look at our data</a>
+					</footer> -->
 				</div>
 			</article>
 
@@ -96,10 +93,13 @@ Our approach is to link disease data (like dengue or leptospirosis) with climate
 			<article id="data" class="wrapper style3">
 				<div class="container">
 					<header>
-						<h2>We mined the internet for fake news data.</h2>
-						<p>Proin odio consequat  sapien vestibulum consequat lorem dolore feugiat.</p>
+						<h2>We sourced our data from the CChain Open Data Repository</h2>
+						<p>The CChain Open Data project, hosted by Thinking Machines, provides publicly accessible datasets to support research in public health, with a particular focus on understanding the causes of diseases. The datasets are aggregated from a variety of sources such as government health reports, research studies, and healthcare surveys. They include information on disease prevalence, risk factors, demographic data, and environmental variables.</p>
 					</header>
-					<div class="row">
+
+					<a href="https://docs.google.com/document/d/179ec5I5OqAGAQnvkS9UhoC17WVqL8eYUd7pW2WOFq24/edit?usp=sharing" class="button large scrolly">Data Collection Document</a>
+					<a href="https://docs.google.com/spreadsheets/d/1LZMMTknEvpRO67PXNyf2QjoW_Wz7-0l1hAPqaVsKCUY/edit?usp=sharing" class="button large scrolly">Data Google Sheets</a>
+					<!-- <div class="row">
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
 								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
@@ -145,12 +145,12 @@ Our approach is to link disease data (like dengue or leptospirosis) with climate
 					</div>
 					<footer>
 						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-					</footer>
+					</footer> -->
 				</div>
 			</article>
 
 			<!-- Methods -->
-			<article id="methods" class="wrapper style3">
+			<!-- <article id="methods" class="wrapper style3">
 				<div class="container">
 					<header>
 						<h2>Let's talk about our data science methodology.</h2>
@@ -176,7 +176,7 @@ Our approach is to link disease data (like dengue or leptospirosis) with climate
 						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
 					</footer>
 				</div>
-			</article>
+			</article> -->
 
 			<!-- Results -->
 			<article id="results" class="wrapper style3">
@@ -185,22 +185,134 @@ Our approach is to link disease data (like dengue or leptospirosis) with climate
 						<h2>Here's what we found out.</h2>
 						<p>Proin odio consequat  sapien vestibulum consequat lorem dolore feugiat.</p>
 					</header>
-					<div class="row">
+
+                    <!-- add small hidden template store for each detail-pane variant -->
+                    <div id="detail-templates" style="display:none;">
+                        <template id="tpl-climate">
+                            <img src="images/climate_fig1.png" alt="" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
+								Climate atmospheric variables, specifically heat index and estimated rainfall, were analyzed to assess their influence on the climate-sensitive disease, dengue. The effects of these variables are depicted in the graphs, with all values normalized to facilitate clearer visualization and comparison alongside dengue case trends.
+							</p>
+							<p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
+								The recorded temperature and heat index data reveal clear seasonal fluctuations typical of the Philippines’ climate. A noticeable pattern emerges from 2014 to 2020, where spikes in temperature are consistently followed by corresponding increases in dengue cases. This suggests a potential lagged relationship between rising temperatures and dengue incidence. However, after 2020, this pattern appears to diminish as dengue cases level off and no longer show the same responsiveness to temperature changes. This disruption likely coincides with the onset of the COVID-19 pandemic, which may have influenced reporting, human behavior, or other factors affecting dengue transmission, thereby interrupting the previously observed seasonal trend.
+							</p>
+							<p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
+								A similar seasonal fluctuation can be observed with estimated rainfall, aligning with the Philippines’ characteristic wet and dry seasons. Notably, the intensity of rainfall events appears to increase over the years, with more pronounced spikes in recent periods. Like temperature, increases in rainfall often precede or coincide with rises in dengue cases. Additionally, the disruption in dengue case patterns during the COVID-19 pandemic is also evident in the rainfall graph.
+							</p>
+
+							<img src="images/climate_fig2.png" alt="" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
+								To gain a deeper insight into the impact of these variables, we examined the correlation between each climate variable and dengue cases. Using Pearson correlation to assess pairwise relationships on data from 2014 to 2022, none of the climate variables exhibited a strong linear correlation with dengue cases. Even if we account for lagging with the incidence, it only resulted in approximately moderate linear correlations between variables.
+							</p>
+
+							<img src="images/climate_fig3.png" alt="" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
+								Even if we do limit the data range from 2014 to 2020, pre-COVID19 pandemic, results were better but still resulted with showing approximately moderate linear correlation between variables.
+							</p>
+                        </template>
+
+                        <template id="tpl-hazards">
+							<img src="images/hazards_fig1.jpg" alt="" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
+								The top graph shows a temporal graph of the outbreaks of dengue through the years. This shows when the dengue risk is high, and we can assume that in a year, there are intervals wherein there is a sudden rise in dengue cases.
+							</p>
+							<p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
+								The bottom graph shows the static flood exposure of the barangays in the city (Cagayan de Oro). This means that, on average, 12.5% of a given barangay is susceptible to low-level flooding (up to the ankles), 25% of a given barangay is susceptible to medium level flooding (up to the knees), while around 17.5% of a given barangay is susceptible to high level flooding (flooding near the neck). 
+							</p>
+							<p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
+								This shows that dengue outbreaks align with the city's consistent exposure to flood-prone conditions, particularly in barangays with high flood hazard areas. Both figures show that because of the susceptibility of many barangays in Cagayan de Oro to flooding of different levels, they are much prone to acquiring Dengue, especially during the rainy months, where Dengue thrives due to the abundance of water, which could be a breeding ground for mosquitoes.
+							</p>
+                        </template>
+
+                        <template id="tpl-socio">
+							<img src="images/socio_fig1.png" alt="" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+                            <p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
+								In plot 1, We see a moderate negative correlation between Dengue Rate and Relative Wealth. This is a significant finding: in Cagayan de Oro, poorer barangays do tend to have higher rates of dengue. We also see a positive correlation with Population Density and a negative correlation with Health Facilities.
+							</p>
+							<p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
+								The 2nd plot clearly visualizes the negative correlation. The red trend line has a clear downward slope, indicating that as the average wealth of a barangay increases, its average annual dengue rate tends to decrease.
+							</p>
+							<p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
+								The 3rd plot shows that the trend line is positive, supporting the idea that denser barangays have higher dengue rates. This is consistent with the nationwide data but the relationship appears a bit clearer in this focused analysis.
+							</p>
+							<p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
+								In the 4th plot, the median dengue rate is highest in barangays with 0 health facilities. The rate drops significantly for areas with 1, 2, or 3 facilities, before ticking up slightly for those with 4 or 5+. This suggests that having at least one local health facility is strongly associated with lower dengue rates in the city.
+							</p>
+                        </template>
+
+						<template id="tpl-combined">
+							<img src="images/combined_fig1.png" alt="" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
+								The top graph shows the scatter plot of the <b>risk score versus disease cases at the barangay level</b>. This indicates that barangays with higher combined environmental and socioeconomic risk scores tend to report more disease cases. The regression line highlights the predictive trend, showing that as risk factors such as built-up density, flood hazard, and limited socioeconomic resilience increase, disease incidence also rises. This suggests that combining indicators provides a stronger signal of outbreak vulnerability compared to looking at single variables alone. 
+							</p>
+							
+							<img src="images/combined_fig2.png" alt="" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
+								Looking closely at the scatter plot, there does not appear to be a strong linear trend between the composite risk score and disease cases. The points are widely dispersed, which suggests that the unweighted combination of environmental and socioeconomic indicators does not directly predict total disease counts. This outcome highlights that outbreaks are influenced by multiple interacting factors, and that some indicators may carry more weight than others depending on the disease. In other words, while the scatter plot shows the overall relationship is weak, it suggests the need for a heatmap, which helps identify which specific variables are more strongly associated with disease incidence.
+							</p>
+							<p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
+								The bottom graph shows the <b>correlation heatmap</b> between all selected indicators and disease cases. This reveals which specific factors are most strongly associated with outbreaks. For example, higher building density and greater flood hazard exposure show stronger correlations with disease totals, while landslide hazard has weaker or inconsistent relationships. The heatmap demonstrates that multiple indicators interact to shape disease vulnerability, reinforcing the importance of a composite approach.
+							</p>
+							<p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
+								Together, the two figures show that barangays with dense built environments and significant hazard exposure are more prone to communicable diseases. This supports the conclusion that integrating environmental and socioeconomic indicators improves prediction of outbreaks, and provides a basis for identifying high-risk barangays for targeted interventions.
+							</p>
+						</template>
+                    </div>
+
+                    <!-- Results row: add data-template attribute to each article -->
+                    <div class="row">
+                        <div class="col-6 col-6-medium col-12-small">
+                            <article class="box style2" data-template="climate">
+                                <a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+                                <h3><a href="#">Climate Variables</a></h3>
+                                <p>How do climate variables influence the incidence of climate-sensitive diseases in selected Philippine cities?</p>
+                            </article>
+                        </div>
+                        <div class="col-6 col-6-medium col-12-small">
+                            <article class="box style2" data-template="hazards">
+                                <a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+                                <h3><a href="#">Environmental Hazards</a></h3>
+                                <p>What is the relationship between environmental hazards and the spatial distribution of disease cases?</p>
+                            </article>
+                        </div>
+                        <div class="col-6 col-6-medium col-12-small">
+                            <article class="box style2" data-template="socio">
+                                <a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+                                <h3><a href="#">Socioeconomic Factors</a></h3>
+                                <p>How do socioeconomic factors affect vulnerability to climate-sensitive diseases?</p>
+                            </article>
+                        </div>
 						<div class="col-6 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-								<h3><a href="#">Results</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-6 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-								<h3><a href="#">Results</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-					</div>
+                            <article class="box style2" data-template="combined">
+                                <a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+                                <h3><a href="#">Combined Factors</a></h3>
+                                <p>Can combining climate, environment, and socioeconomic indicators improve prediction of disease outbreaks?</p>
+                            </article>
+                        </div>
+                    </div>
+
+					<!-- Collapsible details panel (hidden by default) -->
+                    <div id="result-details" style="display:none; margin-top:2rem; border-top:1px solid #ddd; padding:1rem; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.08); min-height:300px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <header>
+                                        <h3 class="detail-title"></h3>
+                                    </header>
+
+                                    <!-- Single-column editable content area for text/figures/graphs -->
+                                    <div class="detail-content" contenteditable="true" style="min-height:220px; line-height:1.6; outline:none;">
+
+                                    </div>
+
+                                    <ul class="actions" style="margin-top:1rem;">
+                                        <li><a href="#" id="close-result-details" class="button small alt">Close</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 					<footer>
 						<p>Want to learn more? Take a look at our source codes.</p>
 						<a href="#contact" class="button large scrolly">Github Repo</a>
@@ -281,6 +393,86 @@ Our approach is to link disease data (like dengue or leptospirosis) with climate
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<!-- Inline handler to open/close the results details panel -->
+			<script>
+            $(function(){
+                var $panel = $('#result-details');
+
+                function showDetailPanel($box){
+                    var title = $box.find('h3').text().trim();
+                    var desc = $box.find('p').text().trim();
+                    var tplKey = $box.data('template'); // e.g. "climate", "hazards", "socio"
+                    var $content = $panel.find('.detail-content');
+                    var current = $panel.data('activeTpl');
+
+                    // If same detail is selected while panel visible -> collapse and return to results
+                    if ($panel.is(':visible') && current === tplKey) {
+                        $panel.stop(true,true).slideUp(150, function(){
+                            $panel.data('activeTpl', null);
+                            $('#results .box.style2.active').removeClass('active');
+                            // return focus/scroll back to results
+                            $('html,body').stop(true).animate({ scrollTop: $('#results').offset().top - 10 }, 200);
+                        });
+                        return;
+                    }
+
+                    // mark active item
+                    $('#results .box.style2.active').removeClass('active');
+                    $box.addClass('active');
+                    $panel.data('activeTpl', tplKey);
+
+                    $panel.find('.detail-title').text(title);
+
+                    // populate content from template or fallback to description
+                    if (tplKey) {
+                        var tpl = document.getElementById('tpl-' + tplKey);
+                        if (tpl && tpl.content) {
+                            $content.html('');
+                            $content.append($(tpl.content.cloneNode(true)));
+                        } else {
+                            $content.html('<p>' + $('<div>').text(desc).html() + '</p>');
+                        }
+                    } else {
+                        $content.html('<p>' + $('<div>').text(desc).html() + '</p>');
+                    }
+
+                    // keep editable but reset edited flag unless user types
+                    $content.attr('contenteditable', true).data('wasEdited', false);
+
+                    // Do NOT change scroll position when opening or switching details.
+                    // If panel already visible, just update content (no slide/scroll).
+                    if ($panel.is(':visible')) {
+                        // optional subtle visual feedback when switching
+                        $content.stop(true,true).fadeTo(120,0.6).fadeTo(120,1);
+                    } else {
+                        // open panel without scrolling
+                        $panel.stop(true,true).slideDown(180);
+                    }
+                }
+
+                // open the details panel when an article box is clicked
+                $('#results .row').on('click', '.box.style2', function(e){
+                    e.preventDefault();
+                    showDetailPanel($(this));
+                });
+
+                // optional: mark content as manually edited
+                $('#result-details').on('input', '.detail-content', function(){
+                    $(this).data('wasEdited', true);
+                });
+
+                // close button: collapse panel and return to results
+                $('#result-details').on('click', '#close-result-details', function(e){
+                    e.preventDefault();
+                    $panel.stop(true,true).slideUp(150, function(){
+                        $panel.data('activeTpl', null);
+                        $('#results .box.style2.active').removeClass('active');
+                        $('html,body').stop(true).animate({ scrollTop: $('#results').offset().top - 10 }, 200);
+                    });
+                });
+            });
+            </script>
 
 	</body>
 </html>

@@ -71,7 +71,7 @@ Our approach is to link disease data (like dengue or leptospirosis) with climate
 							<section class="box style1">
 								<span class="icon solid featured fa-camera-retro"></span>
 								<h3>Problem</h3>
-								<p>In the Philippines, diseases like dengue, leptospirosis, and cholera often spike during floods, heavy rains, or sudden climate shifts. At the same time, not every community is affected the same way—some areas have better healthcare, safer environments, or more resources than others. The problem is that we don’t have a clear picture of how climate, environment, and social conditions all come together to affect disease risks.</p>
+								<p>In the Philippines, diseases like dengue, leptospirosis, and cholera often spike during floods, heavy rains, or sudden climate shifts. At the same time, not every community is affected the same way—some areas have better healthcare, safer environments, or more resources than others. The problem is that we don't have a clear picture of how climate, environment, and social conditions all come together to affect disease risks.</p>
 							</section>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
@@ -149,7 +149,7 @@ Our approach is to link disease data (like dengue or leptospirosis) with climate
 				</div>
 			</article>
 
-			<!-- Methods -->
+		<!-- Methods -->
 			<!-- <article id="methods" class="wrapper style3">
 				<div class="container">
 					<header>
@@ -178,12 +178,12 @@ Our approach is to link disease data (like dengue or leptospirosis) with climate
 				</div>
 			</article> -->
 
-			<!-- Results -->
+		<!-- Results -->
 			<article id="results" class="wrapper style3">
 				<div class="container">
 					<header>
 						<h2>Here's what we found out.</h2>
-						<p>Proin odio consequat  sapien vestibulum consequat lorem dolore feugiat.</p>
+						<p>Through EDA, we reveal underlying patterns and prepare the data for modeling.</p>
 					</header>
 
                     <!-- add small hidden template store for each detail-pane variant -->
@@ -194,10 +194,10 @@ Our approach is to link disease data (like dengue or leptospirosis) with climate
 								Climate atmospheric variables, specifically heat index and estimated rainfall, were analyzed to assess their influence on the climate-sensitive disease, dengue. The effects of these variables are depicted in the graphs, with all values normalized to facilitate clearer visualization and comparison alongside dengue case trends.
 							</p>
 							<p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
-								The recorded temperature and heat index data reveal clear seasonal fluctuations typical of the Philippines’ climate. A noticeable pattern emerges from 2014 to 2020, where spikes in temperature are consistently followed by corresponding increases in dengue cases. This suggests a potential lagged relationship between rising temperatures and dengue incidence. However, after 2020, this pattern appears to diminish as dengue cases level off and no longer show the same responsiveness to temperature changes. This disruption likely coincides with the onset of the COVID-19 pandemic, which may have influenced reporting, human behavior, or other factors affecting dengue transmission, thereby interrupting the previously observed seasonal trend.
+								The recorded temperature and heat index data reveal clear seasonal fluctuations typical of the Philippines' climate. A noticeable pattern emerges from 2014 to 2020, where spikes in temperature are consistently followed by corresponding increases in dengue cases. This suggests a potential lagged relationship between rising temperatures and dengue incidence. However, after 2020, this pattern appears to diminish as dengue cases level off and no longer show the same responsiveness to temperature changes. This disruption likely coincides with the onset of the COVID-19 pandemic, which may have influenced reporting, human behavior, or other factors affecting dengue transmission, thereby interrupting the previously observed seasonal trend.
 							</p>
 							<p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
-								A similar seasonal fluctuation can be observed with estimated rainfall, aligning with the Philippines’ characteristic wet and dry seasons. Notably, the intensity of rainfall events appears to increase over the years, with more pronounced spikes in recent periods. Like temperature, increases in rainfall often precede or coincide with rises in dengue cases. Additionally, the disruption in dengue case patterns during the COVID-19 pandemic is also evident in the rainfall graph.
+								A similar seasonal fluctuation can be observed with estimated rainfall, aligning with the Philippines' characteristic wet and dry seasons. Notably, the intensity of rainfall events appears to increase over the years, with more pronounced spikes in recent periods. Like temperature, increases in rainfall often precede or coincide with rises in dengue cases. Additionally, the disruption in dengue case patterns during the COVID-19 pandemic is also evident in the rainfall graph.
 							</p>
 
 							<img src="images/climate_fig2.png" alt="" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
@@ -300,9 +300,8 @@ Our approach is to link disease data (like dengue or leptospirosis) with climate
                                         <h3 class="detail-title"></h3>
                                     </header>
 
-                                    <!-- Single-column editable content area for text/figures/graphs -->
                                     <div class="detail-content" contenteditable="true" style="min-height:220px; line-height:1.6; outline:none;">
-
+										<!-- template content will be injected here -->
                                     </div>
 
                                     <ul class="actions" style="margin-top:1rem;">
@@ -312,10 +311,174 @@ Our approach is to link disease data (like dengue or leptospirosis) with climate
                             </div>
                         </div>
                     </div>
+				</div>
+			</article>
+
+		<!-- Hypothesis -->
+			<article id="hypothesis" class="wrapper style3">
+				<div class="container">
+					<header>
+						<h2>Evaluating links between risk factors and diseases.</h2>
+						<p>We use hypothesis testing to confirm whether observed relationships between factors and diseases are statistically significant.</p>
+					</header>
+
+					<!-- hidden templates for hypothesis details -->
+					<div id="hypo-templates" style="display:none;">
+						<template id="tpl-hypo-socio">
+							<h4 style="text-align:left;">Research Question and Hypotheses</h4>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								This analysis sought to answer the following research question: "How do socioeconomic factors (e.g., population density, relative wealth, and access to healthcare facilities) affect vulnerability to climate-sensitive diseases?"
+							</p>
+							<ul>
+								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+									We tested the following hypotheses for Dengue Fever in Cagayan de Oro:
+								</p>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										H<sub>0</sub>: Socioeconomic indicators (wealth, population density, health access) do not affect disease vulnerability.
+									</p>
+								</li>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										H<sub>1</sub>: Socioeconomic factors significantly affect disease incidence, with poorer and more densely populated areas experiencing a higher burden.
+									</p>
+								</li>
+							</ul>
+							
+							<h4 style="text-align:left;">Methodology</h4>
+							<ul>
+								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+									To test these hypotheses, we created a cross-sectional dataset of 77 barangays in Cagayan de Oro City. We aggregated data from 2014 to 2022 to create an average profile for each barangay, including:
+								</p>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Dependent Variable:</b> Average Annual Dengue Rate per 100,000 people
+									</p>
+								</li>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Independent variables:</b> Mean Relative Wealth Index (RWI), mean Population Density, and mean count of DOH-registered Health Facilities.
+									</p>
+								</li>
+							</ul>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								The analysis involved two stages: (1) A visual analysis using scatter plots and box plots to identify trends, and (2) a formal hypothesis test using a multiple linear regression (OLS) model.
+							</p>
+
+							<h4 style="text-align:left;">Visual Analysis Findings</h4>
+							<img src="images/socio_fig1.png" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<ul>
+								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+									The visual dashboard provided initial evidence to support the alternative hypothesis (H<sub>1</sub>).
+								</p>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Plot 1 (Heatmap):</b> A correlation heatmap revealed a <b>moderate negative correlation</b> between Relative Wealth and Dengue Rate, suggesting poorer barangays had higher rates. It also showed a <b>weak positive correlation</b> with Population Density.
+									</p>
+								</li>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Plot 2 & 3 (Scatter Plots):</b> These plots confirmed the trends. The scatter plot for wealth (Plot 2) showed a clear downward-sloping trend line, indicating lower rates in wealthier barangays. The plot for density (Plot 3) showed an upward-sloping trend, indicating higher rates in more crowded areas. Each dot on these plots represented a single barangay.
+									</p>
+								</li>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Plot 4 (Box Plot):</b> The analysis of healthcare access revealed a non-linear pattern. Barangays with <b>zero</b> health facilities had a visibly higher median dengue rate than those with one or more, suggesting that a complete lack of access is a significant vulnerability.
+									</p>
+								</li>
+							</ul>
+
+							<h4 style="text-align:left;">Statistical Hypothesis Test Results</h4>
+							<ul>
+								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+									A multiple linear regression was performed to determine if these visual trends were statistically significant. The overall model was significant (F-statistic = 6.546, p = 0.000555) and explained 21.2% of the variance in dengue rates (R-squared = 0.212).
+								</p>
+								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+									The individual factor results are as follows:
+								</p>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Relative Wealth (RWI):</b> This was a <b>highly significant</b> predictor (p = 0.0003). The negative coefficient confirms that as a barangay's average wealth increases, its dengue rate significantly <i>decreases</i>. This finding <b>strongly supports H<sub>1</sub></b>.
+									</p>
+								</li>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Population Density:</b> This was also a <b>highly significant</b> predictor (p = 0.0001). The positive coefficient confirms that as a barangay's population density increases, its dengue rate significantly <i>increases</i>. This finding <b>also strongly supports H<sub>1</sub></b>.
+									</p>
+								</li>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Healthcare Access:</b> This factor's p-value (p = 0.063) was just above the 0.05 threshold for significance. This indicates that once the powerful effects of wealth and density are accounted for, the <i>number</i> of health facilities was not a statistically significant predictor in this specific model.
+									</p>
+								</li>
+							</ul>
+
+							<h4 style="text-align:left;">Conclusion & Discussion</h4>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								<b>Based on the statistical evidence, we reject the null hypothesis (H0).</b>
+							</p>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								The analysis provides strong quantitative support for the alternative hypothesis (H1). The burden of dengue in Cagayan de Oro is not random but is significantly linked to socioeconomic conditions.
+							</p>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								We found that <b>relative wealth</b> and <b>population density</b> are two of the most significant drivers of dengue vulnerability. Barangays that are poorer and more crowded face a statistically higher risk. 
+							</p>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								While the visual plot for healthcare access was compelling, its lack of statistical significance in the final model suggests that the effects of poverty and density are more dominant. Future research could explore access in different ways, such as travel time to the nearest facility rather than just the count within the barangay.
+							</p>
+						</template>
+						
+					</div>
+
+					<!-- hypothesis items -->
+					<div class="row">
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2" data-template="hypo-socio">
+								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+								<h3><a href="#">Socioeconomic Factors</a></h3>
+								<p>H<sub>0</sub>: Socioeconomic factors have no significant impact on disease vulnerability.</p>
+							</article>
+						</div>
+						<!-- <div class="col-4 col-6-medium col-12-small">
+							<article class="box style2" data-template="hypo-climate">
+								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+								<h3><a href="#">Climate Variables</a></h3>
+								<p>H<sub>0</sub>: Climate variables do not influence disease incidence.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2" data-template="hypo-combined">
+								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+								<h3><a href="#">Combined Factors</a></h3>
+								<p>H<sub>0</sub>: Combining indicators does not improve outbreak prediction.</p>
+							</article>
+						</div> -->
+					</div>
+
+					<!-- Collapsible hypothesis details panel -->
+					<div id="hypothesis-details" style="display:none; margin-top:2rem; border-top:1px solid #ddd; padding:1rem; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.08); min-height:300px;">
+						<div class="container">
+							<div class="row">
+								<div class="col-12">
+									<header>
+                                        <h3 class="detail-title"></h3>
+                                    </header>
+
+									<div class="detail-content" contenteditable="true" style="min-height:180px; line-height:1.6; outline:none;">
+										<!-- template content will be injected here -->
+									</div>
+
+									<ul class="actions" style="margin-top:1rem;">
+										<li><a href="#" id="close-hypothesis-details" class="button small alt">Close</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
 
 					<footer>
 						<p>Want to learn more? Take a look at our source codes.</p>
-						<a href="#contact" class="button large scrolly">Github Repo</a>
+						<a href="https://github.com/JEGeraldo/cs132wfr-team3/tree/main" class="button large scrolly">Github Repo</a>
 					</footer>
 				</div>
 			</article>
@@ -473,6 +636,90 @@ Our approach is to link disease data (like dengue or leptospirosis) with climate
                 });
             });
             </script>
+
+			<!-- Inline handler for hypothesis details (behavior matches results panel: toggle same selection, no scroll on open, close returns to hypothesis) -->
+			<script>
+			$(function(){
+				var $panelH = $('#hypothesis-details');
+
+				function showHypoPanel($box){
+					var title = $box.find('h3').text().trim();
+					var tplKey = $box.data('template'); // e.g. "hypo-socio"
+					var $content = $panelH.find('.detail-content');
+					var current = $panelH.data('activeTpl');
+
+					// if same selected -> collapse and return to hypotheses
+					if ($panelH.is(':visible') && current === tplKey) {
+						$panelH.stop(true,true).slideUp(150, function(){
+							$panelH.data('activeTpl', null);
+							$('#hypothesis .box.style2.active').removeClass('active');
+							$('html,body').stop(true).animate({ scrollTop: $('#hypothesis').offset().top - 10 }, 200);
+						});
+						return;
+					}
+
+					// mark active
+					$('#hypothesis .box.style2.active').removeClass('active');
+					$box.addClass('active');
+					$panelH.data('activeTpl', tplKey);
+
+					$panelH.find('.detail-title').text(title);
+
+					// load template or fallback
+					if (tplKey) {
+						var tpl = document.getElementById('tpl-' + tplKey);
+						if (tpl && tpl.content) {
+							$content.html('');
+							$content.append($(tpl.content.cloneNode(true)));
+						} else {
+							var desc = $box.find('p').text().trim();
+							$content.html('<p>' + $('<div>').text(desc).html() + '</p>');
+						}
+					} else {
+						var desc = $box.find('p').text().trim();
+						$content.html('<p>' + $('<div>').text(desc).html() + '</p>');
+					}
+
+					$content.attr('contenteditable', true).data('wasEdited', false);
+
+					// do not change page scroll when opening/switching
+					if ($panelH.is(':visible')) {
+						$content.stop(true,true).fadeTo(120,0.6).fadeTo(120,1);
+					} else {
+						$panelH.stop(true,true).slideDown(180);
+					}
+				}
+
+				// open hypothesis detail on click
+				$('#hypothesis .row').on('click', '.box.style2', function(e){
+					e.preventDefault();
+					showHypoPanel($(this));
+				});
+
+				// header back/close handlers -> collapse and return to hypothesis section
+				$panelH.on('click', '#hypo-back, #hypo-close-header', function(e){
+					e.preventDefault();
+					$panelH.stop(true,true).slideUp(150, function(){
+						$panelH.data('activeTpl', null);
+						$('#hypothesis .box.style2.active').removeClass('active');
+						$('html,body').stop(true).animate({ scrollTop: $('#hypothesis').offset().top - 10 }, 200);
+					});
+				});
+
+				// footer close button
+				$panelH.on('click', '#close-hypothesis-details', function(e){
+					e.preventDefault();
+					$panelH.stop(true,true).slideUp(150, function(){
+						$panelH.data('activeTpl', null);
+						$('#hypothesis .box.style2.active').removeClass('active');
+						$('html,body').stop(true).animate({ scrollTop: $('#hypothesis').offset().top - 10 }, 200);
+					});
+				});
+
+				// mark manual edits
+				$panelH.on('input', '.detail-content', function(){ $(this).data('wasEdited', true); });
+			});
+			</script>
 
 	</body>
 </html>

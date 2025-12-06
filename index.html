@@ -334,6 +334,308 @@ Our approach is to link disease data (like dengue or leptospirosis) with climate
 
 					<!-- hidden templates for hypothesis details -->
 					<div id="hypo-templates" style="display:none;">
+						<template id="tpl-hypo-envi">
+							<h4 style="text-align:left;">Research Question and Hypotheses</h4>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								For this part of the analysis, we sought to answer the research question “What is the relationship between environmental hazards (e.g., flood-prone and landslide-prone areas) and the spatial distribution of disease cases?”
+							</p>
+
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								Though the group wanted to answer this question by focusing on Cagayan de Oro, the group found it difficult to do so because of the lack of barangay health data, or disease cases per barangay. Thus, to answer this specific research question, the group had to compare the environmental hazards (flood hazard percentages and landslide hazard percentages) and disease cases of 5 different cities, namely Cagayan de Oro, Mandaluyong City, Tacloban City, Iloilo City, and Zamboanga City, in order to find a trend or relationship between environmental hazards and disease cases. The diseases examined include dengue, leptospirosis, and typhoid expressed as incidence rates per 100,000 population.
+							</p>
+							
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								We tested the following hypotheses for different diseases in the 5 aforementioned cities:
+							</p>
+							<ul>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										H<sub>0</sub>: Environmental hazards (e.g., flood-prone areas, landslide susceptibility) are not associated with disease incidence
+									</p>
+								</li>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										H<sub>1</sub>: Environmental hazards are significantly associated with higher incidence of waterborne and vector-borne diseases.
+									</p>
+								</li>
+							</ul>
+							
+							<h4 style="text-align:left;">Methodology</h4>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								For each city, the following data were compiled for a single year. The group selected the latest available data, which is for the year 2022:	
+							</p>
+							<ul>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										Weekly disease case counts for the whole city (dengue, leptospirosis, typhoid)
+									</p>
+								</li>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										Hazard exposure metrics
+									</p>
+									<ul>
+										<li>
+											<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+												Percentage of area classified under high flood hazard
+											</p>
+										</li>
+										<li>
+											<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+												Percentage of area classified under high landslide hazard
+											</p>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										Population for each of the 5 cities	
+									</p>
+								</li>
+							</ul>
+
+							<h4 style="text-align:left;">Data Preparation</h4>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								Weekly disease case counts for each disease were summed to obtain the annual disease burden per city. To normalize, we divided the disease count by the city population and multiplied it by 100,00, yielding incidence rates per 100k population.	
+							</p>
+
+							<h4 style="text-align:left;">Statistical Method</h4>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								To test association/relationship between environmental hazard exposure and disease incidence, Spearman rank correlation was used. Spearman correlation was chosen.
+							</p>
+
+							<h4 style="text-align:left;">Visual Analysis Findings</h4>
+							<img src="images/hypo_envi_fig1.jpg" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<b>Figure 1:</b> Scatterplot of Flood Hazard Percentages Vs Dengue Incidence in 2022 in 5 cities
+
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								The scatterplot above comparing high flood-hazard percentages and dengue incidence shows no evident linear or monotonic relationship. <b>Some cities with a high flood percentage report a high dengue incidence (Cagayan de Oro), the pattern is not consistent. This is evident in Zamboanga city, which exhibits the highest dengue incidence out of the 5 cities while having the third lowest flood-hazard percentage.</b> This visual suggests that flood-prone areas, as defined by long-term hazard mapping, do not reliably correspond to dengue incidence levels across cities.
+							</p>
+
+							<img src="images/hypo_envi_fig2.jpg" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<b>Figure 2:</b> Scatterplot of Flood Hazard Percentages Vs Typhoid Incidence in 2022 in 5 cities
+							
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								Similarly, the scatterplot compares high flood-hazard percentage and typhoid incidence per 100,000 population which <b>shows no clear or evident upward or downward trend</b>. Typhoid incidence varies widely even among cities with similar flood-hazard levels. Take Zamboanga City, for instance, which exhibits the <b>highest typhoid incidence</b> despite having only a modest flood-prone area (4%), while Cagayan de Oro has a <b>much higher flood-prone percentage (17%)</b> but only a moderate typhoid incidence. Meanwhile, Mandaluyong shows the <b>lowest typhoid incidence</b> despite having a relatively higher flood-hazard percentage (10%). This visual pattern suggests <b>no meaningful relationship</b> between flood-prone area and typhoid burden.
+							</p>
+
+							<img src="images/hypo_envi_fig3.jpg" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<b>Figure 3:</b> Scatterplot of Flood Hazard Percentages Vs Leptospirosis Incidence in 2022 in 5 cities
+							
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								Similar as well to the previous graphs, the relationship between flood hazard and leptospirosis incidence appears to have <b>no clear trend</b>. Cities with a low flood-hazard percentages like Iloilo exhibit moderate leptospirosis incidence, while Mandaluyong, <b>despite having a higher flood-prone proportion, actually has a lower incidence of leptospirosis</b>. Again, Zamboanga appears as an outlier, with the <b>highest leptospirosis rate among all cities despite having a relatively small flood-hazard percentage</b>.
+							</p>
+
+							<img src="images/hypo_envi_fig4.jpg" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<b>Figure 4:</b> Scatterplot of Landslide Hazard Percentages Vs Dengue Incidence in 2022 in 5 cities
+
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								For this graph, we can visually observe a clear, monotonic upward trend. Cities with higher percentages of landslide-prone land exhibit a higher dengue incidence rate. Mandaluyong and Iloilo which have relatively low landslide hazards have low dengue incidence rates, while the trend increases and the most landslide prone area, Zamboanga City, shows the highest dengue incidence rate.
+							</p>
+
+							<img src="images/hypo_envi_fig5.jpg" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<b>Figure 5:</b> Scatterplot of Landslide Hazard Percentages Vs Typhoid Incidence in 2022 in 5 cities
+
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								For this plot, we also observe a moderately increasing pattern, but with some variability across cities. Again, Zamboanga City has the highest landslide hazard percentage and also the highest typhoid incidence, while Mandaluyong City with the lowest landslide percentages reports little to no typhoid cases. However, we observe that though Iloilo has a lower landslide percentage, it has a higher typhoid incidence than Tacloban.
+							</p>
+
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								The points loosely suggest a positive trend, however we take note oof the inconsistencies that may not be enough to imply a clear association.	
+							</p>
+
+							<img src="images/hypo_envi_fig6.jpg" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<b>Figure 6:</b> Scatterplot of Landslide Hazard Percentages Vs Leptospirosis Incidence in 2022 in 5 cities
+
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								This graph differs from the last 2, as there seems to be no clear relationship between landslide percentages and leptospirosis cases. Zamboanga City again appears as an outlier, showing a relatively high landslide hazard percentages and an elevated leptospirosis incidence. However, the 4 remaining cities with low leptospirosis incidence have very different landslide hazard percentages. Thus, the leptospirosis incidence does not visually increase with landslide exposure, meaning there is no meaningful association between the two.	
+							</p>
+
+							<h4 style="text-align:left;">Statistical Hypothesis Test Results</h4>
+							<h5 style="text-align:left;">Flood Hazard Percentage vs Disease Incidence</h5>
+							<table>
+								<tr>
+									<th>Disease</th>
+									<th>Spearman (rho)</th>
+									<th>p-value</th>
+									<th>Interpretation</th>
+								</tr>
+								<tr>
+									<td>Dengue</td>
+									<td>0.10</td>
+									<td>0.8729</td>
+									<td>No significance</td>
+								</tr>
+								<tr>
+									<td>Leptospirosis</td>
+									<td>0.10</td>
+									<td>0.8729</td>
+									<td>No significance</td>
+								</tr>
+								<tr>
+									<td>Typhoid</td>
+									<td>0.20</td>
+									<td>0.7471</td>
+									<td>No significance</td>
+								</tr>
+							</table>
+
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								Flood hazard percentage shows no statistically significant association with dengue, leptospirosis, or typhoid incidence across the five cities. Thus, we <b>fail to reject H0</b> for all three diseases.
+							</p>
+
+							<h5 style="text-align:left;">Landslide Hazard Percentage vs Disease Incidence</h5>
+							<table>
+								<tr>
+									<th>Disease</th>
+									<th>Spearman (rho)</th>
+									<th>p-value</th>
+									<th>Interpretation</th>
+								</tr>
+								<tr>
+									<td>Dengue</td>
+									<td><b>0.90</b></td>
+									<td><b>0.0374</b></td>
+									<td><b>Significant Positive Association</b></td>
+								</tr>
+								<tr>
+									<td>Leptospirosis</td>
+									<td>0.10</td>
+									<td>0.8729</td>
+									<td>No significance</td>
+								</tr>
+								<tr>
+									<td>Typhoid</td>
+									<td>0.70</td>
+									<td>0.1881</td>
+									<td>No significance (strong trend)</td>
+								</tr>
+							</table>
+
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								For dengue incidence, there is a strong positive correlation with Landslide-prone area percentage. Cities with higher landslide hazard proportions tend to have higher dengue incidence rates. <b>Reject H0</b>.	
+							</p>
+
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								However, for leptospirosis and typhoid, there is no statistically significant relationship. However, we look at typhoid and see that rho=0.70, which suggests a possible trend which may warrant further investigation, hopefully with a larger sample (more cities). <b>Fail to reject H0</b>.
+							</p>
+
+							<h4 style="text-align:left;">Conclusion & Discussion</h4>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								This research question, as part of a larger study involving climate, health, and socioeconomic indicators of disease vulnerability in cities in the Philippines, explored how environmental hazard exposure relates to disease incidence across cities in the Philippines. The analysis showed that there is no meaningful relationship between the extent of flood-prone areas and any of the three diseases examined.
+							</p>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								In contrast, however, there is a strong and significant association between landslide-prone area percentage and dengue incidence rates. We may say that this is ecologically plausible, as landslide-prone terrain is typically characterized by high rainfall, vegetation density, humid climates, and most especially, uneven drainage, which are favorable habitats for Aedes aegypti mosquitoes.
+							</p>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								Thus, this exploratory analysis for this specific research question suggests that landslide-prone terrain may be a useful environmental indicator for identifying populations at higher risk for dengue. Future research by the group or other groups may incorporate multi-year disease incidence average, disease incidence of different barangays of different cities for a barangay-level analysis, or include more cities in the correlation analysis that was done for this research question.
+							</p>
+						</template>
+
+						<template id="tpl-hypo-socio">
+							<h4 style="text-align:left;">Research Question and Hypotheses</h4>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								This analysis sought to answer the following research question: "How do socioeconomic factors (e.g., population density, relative wealth, and access to healthcare facilities) affect vulnerability to climate-sensitive diseases?"
+							</p>
+							<ul>
+								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+									We tested the following hypotheses for Dengue Fever in Cagayan de Oro:
+								</p>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										H<sub>0</sub>: Socioeconomic indicators (wealth, population density, health access) do not affect disease vulnerability.
+									</p>
+								</li>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										H<sub>1</sub>: Socioeconomic factors significantly affect disease incidence, with poorer and more densely populated areas experiencing a higher burden.
+									</p>
+								</li>
+							</ul>
+							
+							<h4 style="text-align:left;">Methodology</h4>
+							<ul>
+								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+									To test these hypotheses, we created a cross-sectional dataset of 77 barangays in Cagayan de Oro City. We aggregated data from 2014 to 2022 to create an average profile for each barangay, including:
+								</p>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Dependent Variable:</b> Average Annual Dengue Rate per 100,000 people
+									</p>
+								</li>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Independent variables:</b> Mean Relative Wealth Index (RWI), mean Population Density, and mean count of DOH-registered Health Facilities.
+									</p>
+								</li>
+							</ul>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								The analysis involved two stages: (1) A visual analysis using scatter plots and box plots to identify trends, and (2) a formal hypothesis test using a multiple linear regression (OLS) model.
+							</p>
+
+							<h4 style="text-align:left;">Visual Analysis Findings</h4>
+							<img src="images/hypo_socio_fig1.png" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<ul>
+								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+									The visual dashboard provided initial evidence to support the alternative hypothesis (H<sub>1</sub>).
+								</p>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Plot 1 (Heatmap):</b> A correlation heatmap revealed a <b>moderate negative correlation</b> between Relative Wealth and Dengue Rate, suggesting poorer barangays had higher rates. It also showed a <b>weak positive correlation</b> with Population Density.
+									</p>
+								</li>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Plot 2 & 3 (Scatter Plots):</b> These plots confirmed the trends. The scatter plot for wealth (Plot 2) showed a clear downward-sloping trend line, indicating lower rates in wealthier barangays. The plot for density (Plot 3) showed an upward-sloping trend, indicating higher rates in more crowded areas. Each dot on these plots represented a single barangay.
+									</p>
+								</li>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Plot 4 (Box Plot):</b> The analysis of healthcare access revealed a non-linear pattern. Barangays with <b>zero</b> health facilities had a visibly higher median dengue rate than those with one or more, suggesting that a complete lack of access is a significant vulnerability.
+									</p>
+								</li>
+							</ul>
+
+							<h4 style="text-align:left;">Statistical Hypothesis Test Results</h4>
+							<ul>
+								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+									A multiple linear regression was performed to determine if these visual trends were statistically significant. The overall model was significant (F-statistic = 6.546, p = 0.000555) and explained 21.2% of the variance in dengue rates (R-squared = 0.212).
+								</p>
+								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+									The individual factor results are as follows:
+								</p>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Relative Wealth (RWI):</b> This was a <b>highly significant</b> predictor (p = 0.0003). The negative coefficient confirms that as a barangay's average wealth increases, its dengue rate significantly <i>decreases</i>. This finding <b>strongly supports H<sub>1</sub></b>.
+									</p>
+								</li>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Population Density:</b> This was also a <b>highly significant</b> predictor (p = 0.0001). The positive coefficient confirms that as a barangay's population density increases, its dengue rate significantly <i>increases</i>. This finding <b>also strongly supports H<sub>1</sub></b>.
+									</p>
+								</li>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Healthcare Access:</b> This factor's p-value (p = 0.063) was just above the 0.05 threshold for significance. This indicates that once the powerful effects of wealth and density are accounted for, the <i>number</i> of health facilities was not a statistically significant predictor in this specific model.
+									</p>
+								</li>
+							</ul>
+
+							<h4 style="text-align:left;">Conclusion & Discussion</h4>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								<b>Based on the statistical evidence, we reject the null hypothesis (H0).</b>
+							</p>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								The analysis provides strong quantitative support for the alternative hypothesis (H1). The burden of dengue in Cagayan de Oro is not random but is significantly linked to socioeconomic conditions.
+							</p>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								We found that <b>relative wealth</b> and <b>population density</b> are two of the most significant drivers of dengue vulnerability. Barangays that are poorer and more crowded face a statistically higher risk. 
+							</p>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								While the visual plot for healthcare access was compelling, its lack of statistical significance in the final model suggests that the effects of poverty and density are more dominant. Future research could explore access in different ways, such as travel time to the nearest facility rather than just the count within the barangay.
+							</p>
+						</template>
+
 						<template id="tpl-hypo-socio">
 							<h4 style="text-align:left;">Research Question and Hypotheses</h4>
 							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
@@ -442,27 +744,37 @@ Our approach is to link disease data (like dengue or leptospirosis) with climate
 
 					<!-- hypothesis items -->
 					<div class="row">
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2" data-template="hypo-socio">
-								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-								<h3><a href="#">Socioeconomic Factors</a></h3>
-								<p>H<sub>0</sub>: Socioeconomic factors have no significant impact on disease vulnerability.</p>
-							</article>
-						</div>
-						<!-- <div class="col-4 col-6-medium col-12-small">
+						<div class="col-3 col-6-medium col-12-small">
 							<article class="box style2" data-template="hypo-climate">
 								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
 								<h3><a href="#">Climate Variables</a></h3>
 								<p>H<sub>0</sub>: Climate variables do not influence disease incidence.</p>
 							</article>
 						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2" data-template="hypo-combined">
+
+						<div class="col-3 col-6-medium col-12-small">
+							<article class="box style2" data-template="hypo-envi">
+								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+								<h3><a href="#">Environmental Hazards</a></h3>
+								<p>H<sub>0</sub>: Environmental Hazards are not associated with disease incidence.</p>
+							</article>
+						</div>
+
+						<div class="col-3 col-6-medium col-12-small">
+							<article class="box style2" data-template="hypo-socio">
 								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+								<h3><a href="#">Socioeconomic Factors</a></h3>
+								<p>H<sub>0</sub>: Socioeconomic factors have no significant impact on disease vulnerability.</p>
+							</article>
+						</div>
+
+						<div class="col-3 col-6-medium col-12-small">
+							<article class="box style2" data-template="hypo-combined">
+								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
 								<h3><a href="#">Combined Factors</a></h3>
 								<p>H<sub>0</sub>: Combining indicators does not improve outbreak prediction.</p>
 							</article>
-						</div> -->
+						</div>
 					</div>
 
 					<!-- Collapsible hypothesis details panel -->

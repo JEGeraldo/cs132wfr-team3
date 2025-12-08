@@ -843,152 +843,101 @@
 										H<sub>1</sub>: Socioeconomic and built‑environment factors do significantly affect barangay‑level vulnerability to climate‑sensitive diseases; barangays that are poorer, more densely built, and more exposed to hazards will show higher disease incidence.
 									</p>
 								</li>
+								
 							</ul>
 							
 							<h4 style="text-align:left;">Methodology</h4>
 							<ul>
 								<li>
 									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Dependent Variable:</b> Average Annual Dengue Rate per 100,000 people
+										<b>Dependent Variable:</b> Primary outcome: Disease burden measured as either average annual disease rate per 100,000 poulation or normalized disease case counts at the barangay level.
 									</p>
 								</li>
 								<li>
 									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Independent variables:</b> Mean Relative Wealth Index (RWI), mean Population Density, and mean count of DOH-registered Health Facilities.
+										<b>Independent variables:</b> Composite risk score (normalized): an unweighted combination of environmental and socioeconomic indicators (built‑up density, flood hazard, landslide hazard, relative wealth, etc.). Component indicators: built‑up area percentage; building density; flood hazard exposure (5‑, 25‑, 100‑yr layers); landslide hazard; population density; relative wealth index (RWI); count of health facilities.
 									</p>
 								</li>
 							</ul>
-							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-								The analysis involved two stages: (1) A visual analysis using scatter plots and box plots to identify trends, and (2) a formal hypothesis test using a multiple linear regression (OLS) model.
-							</p>
 
-							<h4 style="text-align:left;">Visual Analysis Findings</h4>
-							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-								A. Dengue Fever (Primary Analysis)
-							</p>
-							<img src="images/hypo_socio_fig1.png" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+
+							<h4 style="text-align:left;">Analytical approach: visual analysis</h4>
 							<ul>
-								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-									The visual dashboard provided initial evidence to support the alternative hypothesis (H1).
-								</p>
 								<li>
 									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Plot 1 (Heatmap):</b> A correlation heatmap revealed a <b>moderate negative correlation</b> between Relative Wealth and Dengue Rate, suggesting poorer barangays had higher rates. It also showed a <b>weak positive correlation</b> with Population Density.
+										Scatter plot of composite risk score vs disease cases to inspect the overall relationship and regression trend.
 									</p>
 								</li>
 								<li>
 									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Plot 2 & 3 (Scatter Plots):</b> These plots confirmed the trends. The scatter plot for wealth (Plot 2) showed a clear downward-sloping trend line, indicating lower rates in wealthier barangays. The plot for density (Plot 3) showed an upward-sloping trend, indicating higher rates in more crowded areas. Each dot on these plots represented a single barangay.
-									</p>
-								</li>
-								<li>
-									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Plot 4 (Box Plot):</b> The analysis of healthcare access revealed a non-linear pattern. Barangays with <b>zero</b> health facilities had a visibly higher median dengue rate than those with one or more, suggesting that a complete lack of access is a significant vulnerability.
+										Correlation heatmap across all indicators and disease cases to identify which variables are most strongly associated with disease burden.
 									</p>
 								</li>
 							</ul>
-
-							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-								B. Leptospirosis (Comparative Analysis)
-							</p>
-							<img src="images/hypo_socio_fig3.png" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<img src="images/cole1.png" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
 							<ul>
-								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-									The visual dashboard provided distinct evidence to support the alternative hypothesis (H1).
-								</p>
-								<li>
+								<h4 style="text-align:left;">Composite risk score vs diseases cases (scatter plot)</h4>
 									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Plot 1 (Heatmap):</b> A correlation heatmap revealed a strong positive correlation between Population Density and Leptospirosis Rate (r = 0.53), suggesting that crowded barangays had significantly higher rates. In contrast, it showed a negligible correlation with Relative Wealth (r = 0.06), indicating that income level is not a primary driver.
+										The scatter plot shows a positive regression slope: barangays with higher composite risk scores tend to report more disease cases. The regression line indicates a predictive trend in the expected direction (higher combined hazard + socioeconomic vulnerability results in higher disease burden).
 									</p>
-								</li>
-								<li>
+
 									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Plot 2 & 3 (Scatter Plots):</b> These plots confirmed the unique nature of this disease. The scatter plot for density (Plot 3) showed a sharp upward-sloping trend, visually demonstrating that infection rates climb steeply as neighborhoods become more crowded. The plot for wealth (Plot 2) showed a flat trend line, indicating that the disease burden is shared relatively equally across both rich and poor communities.
+										However, the data points are widely dispersed, and the linear trend is weak. This dispersion suggests that the unweighted composite score captures some relevance but does not fully explain variation in disease counts. Outbreaks are influenced by multiple interacting factors and by disease‑specific drivers that the composite may dilute.
 									</p>
-								</li>
-								<li>
-									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Plot 4 (Box Plot):</b> The analysis of healthcare access revealed a persistent vulnerability. Barangays with zero health facilities had a notably higher median disease rate compared to those with better coverage, suggesting that even though the disease affects all income levels, communities with no immediate access to care suffer a higher burden of reported cases.
-									</p>
-								</li>
 							</ul>
 
 							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-								C. Typhoid Fever (Comparative Analysis)
+							
 							</p>
-							<img src="images/hypo_socio_fig2.png" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
-							<ul>
-								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-									The visual dashboard provided limited evidence for the alternative hypothesis (H1), suggesting that Typhoid vulnerability is not strongly driven by broad socioeconomic factors.
-								</p>
-								<li>
-									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Plot 1 (Heatmap):</b> A correlation heatmap revealed near-zero correlations for both Relative Wealth (r = 0.00) and Population Density (r = -0.06). This suggests that unlike Dengue or Leptospirosis, Typhoid outbreaks do not follow clear spatial patterns of poverty or crowding.
-									</p>
-								</li>
-								<li>
-									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Plot 2 & 3 (Scatter Plots):</b> These plots visually depicted the lack of correlation. The scatter plots for both wealth (Plot 2) and density (Plot 3) showed flat trend lines with data points scattered randomly. This indicates that high and low infection rates are found sporadically across all types of barangays, regardless of their economic status or population size.
-									</p>
-								</li>
-								<li>
-									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Plot 4 (Box Plot):</b> The analysis of healthcare access revealed no distinct pattern. The median disease rates remained relatively consistent across barangays regardless of the number of health facilities, reinforcing the conclusion that Typhoid risk in this city is likely driven by point-source factors (such as specific contaminated water or food sources) rather than systemic socioeconomic lack.
-									</p>
-								</li>
-							</ul>
+							<img src="images/cole2.png" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							
+								<h4 style="text-align:left;">Correlation heatmap (indicators vs disease cases)</h4>
 
-							<h4 style="text-align:left;">Statistical Hypothesis Test Results</h4>
-							<ul>
+								
 								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-									A multiple linear regression was performed to determine if these visual trends were statistically significant. The overall model was significant (F-statistic = 6.546, p = 0.000555) and explained 21.2% of the variance in dengue rates (R-squared = 0.212).
+										The heatmap identifies which specific indicators are most strongly associated with disease totals. The most notable patterns are:
 								</p>
-								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-									The individual factor results are as follows:
-								</p>
-								<li>
-									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Relative Wealth (RWI):</b> This was a <b>highly significant</b> predictor (p = 0.0003). The negative coefficient confirms that as a barangay's average wealth increases, its dengue rate significantly <i>decreases</i>. This finding <b>strongly supports H<sub>1</sub></b>.
-									</p>
-								</li>
-								<li>
-									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Population Density:</b> This was also a <b>highly significant</b> predictor (p = 0.0001). The positive coefficient confirms that as a barangay's population density increases, its dengue rate significantly <i>increases</i>. This finding <b>also strongly supports H<sub>1</sub></b>.
-									</p>
-								</li>
-								<li>
-									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Healthcare Access:</b> This factor's p-value (p = 0.063) was just above the 0.05 threshold for significance. This indicates that once the powerful effects of wealth and density are accounted for, the <i>number</i> of health facilities was not a statistically significant predictor in this specific model.
-									</p>
-								</li>
-							</ul>
 
-							<h4 style="text-align:left;">Conclusion & Discussion</h4>
+								<ul>
+									<li>
+										<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+											<b>Built‑up measures (e.g., percent built‑up area, building density) </b> show strong positive correlations with the composite risk score and relatively stronger correlations with disease cases than some other variables.
+										</p>
+									</li>
+									<li>
+										<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+											<b>Flood hazard exposure (especially higher‑frequency or higher‑severity layers)</b> also shows positive correlations with disease totals.
+										</p>
+									</li>
+									<li>
+										<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+											<b>Landslide hazard </b>shows weaker or inconsistent relationships with disease counts.
+										</p>
+									</li>
+
+									<li>
+										<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+											<b>The composite risk score is highly correlated with built‑up indicators </b>, indicating the composite is driven largely by urban density metrics.
+										</p>
+								</ul>
+
+							
+					
+							<h4 style="text-align:left;">Conclusion & Discussion (Decision on hypothesis)</h4>
+								
 							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-								<b>Based on the statistical evidence, we reject the null hypothesis (H0) for Dengue Fever and Leptospirosis, but fail to reject it for Typhoid Fever.</b>
+								Based on the visual evidence, <b>we reject the null hypothesis (H0) </b> in the sense that socioeconomic and built‑environment factors are associated with disease vulnerability, but the strength and nature of those associations vary by indicator and by disease. The composite score provided a useful screening signal, but it did not fully predict outbreaks in this dataset. </p>
+
+							<h4 style="text-align:left;">Interpretaion and Implications</h4>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								The analysis suggests that vulnerability to climate‑sensitive diseases in Philippine barangays is multifaceted. While higher composite risk scores correspond to increased disease burden, the weak linear trend indicates that no single composite measure can capture the complexity of outbreak dynamics. Specific indicators like built‑up density and flood hazard exposure appear more relevant than others, highlighting the need for disease‑specific risk models. </p>
+
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								Different diseases respond to different drivers (e.g., poverty and housing quality for vector‑borne diseases; crowding and flood exposure for water‑ or rodent‑borne diseases). A single composite should be supplemented with disease‑specific indicator weighting or separate models.
 							</p>
-							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-								The analysis demonstrates that vulnerability to climate-sensitive diseases in Cagayan de Oro is not uniform; rather, it is highly dependent on the specific disease vector and its interaction with the urban environment.
-							</p>
-							<ol>
-								<li>
-									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Dengue Fever is a disease of poverty.</b> We found that relative wealth is a dominant protective factor (r = -0.46, p = 0.0003). Poorer barangays likely lack the housing quality (screens, sealed walls) and reliable infrastructure (piped water, waste management) needed to prevent mosquito breeding.
-									</p>
-								</li>
-								<li>
-									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Leptospirosis is a disease of crowding.</b> Its strong correlation with density (r = 0.53) but not wealth suggests that flood risk and urban congestion drive transmission more than household income.
-									</p>
-								</li>
-								<li>
-									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Typhoid Fever follows a different pattern.</b> The lack of socioeconomic correlation (r ≅ 0) suggests its transmission is likely driven by point-source contamination (e.g., specific water sources or food vendors) that affects communities regardless of their wealth or density.
-									</p>
-								</li>
-							</ol>
-							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-								In conclusion, socioeconomic factors significantly affect disease vulnerability, but the specific drivers—wealth versus density—vary by disease. Effective public health interventions in Cagayan de Oro must be targeted accordingly: focusing on <b>poverty alleviation and housing</b> for Dengue, <b>urban decongestion and flood control</b> for Leptospirosis, and <b>city-wide water safety</b> for Typhoid.
+
+							<p style= "text-align:justify; text-indent: 1.2em; margin-bottom:0.9rem;">
+								In summary, barangays with dense built environments and greater flood hazard exposure show the clearest and most consistent association with higher communicable disease burden in this analysis. A composite risk score combining environmental and socioeconomic indicators provides a useful screening tool for vulnerability mapping, but its predictive power is limited unless component indicators are weighted or modeled separately for each disease. Targeted interventions should therefore focus on dense, flood‑exposed, and underserved barangays while refining the composite for disease‑specific prediction.
 							</p>
 						</template>
 

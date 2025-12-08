@@ -656,15 +656,15 @@
 						<template id="tpl-hypo-socio">
 							<h4 style="text-align:left;">Research Question and Hypotheses</h4>
 							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-								This analysis sought to answer the following research question: "How do socioeconomic factors (e.g., population density, relative wealth, and access to healthcare facilities) affect vulnerability to climate-sensitive diseases?"
+								This analysis sought to answer the following research question: "Can combining climate, environment, and socioeconomic indicators improve prediction of disease outbreaks at the barangay level?"
 							</p>
 							<ul>
 								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-									We tested the following hypotheses for Dengue Fever in Cagayan de Oro:
+									We tested the following hypotheses for different diseases in Cagayan de Oro:
 								</p>
 								<li>
 									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										H<sub>0</sub>: Socioeconomic indicators (wealth, population density, health access) do not affect disease vulnerability.
+										H<sub>0</sub>: Socioeconomic factors such as wealth, population density, and healthcare access have no significant impact on disease vulnerability.
 									</p>
 								</li>
 								<li>
@@ -695,10 +695,13 @@
 							</p>
 
 							<h4 style="text-align:left;">Visual Analysis Findings</h4>
-							<img src="images/socio_fig1.png" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								A. Dengue Fever (Primary Analysis)
+							</p>
+							<img src="images/hypo_socio_fig1.png" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
 							<ul>
 								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-									The visual dashboard provided initial evidence to support the alternative hypothesis (H<sub>1</sub>).
+									The visual dashboard provided initial evidence to support the alternative hypothesis (H1).
 								</p>
 								<li>
 									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
@@ -713,6 +716,56 @@
 								<li>
 									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
 										<b>Plot 4 (Box Plot):</b> The analysis of healthcare access revealed a non-linear pattern. Barangays with <b>zero</b> health facilities had a visibly higher median dengue rate than those with one or more, suggesting that a complete lack of access is a significant vulnerability.
+									</p>
+								</li>
+							</ul>
+
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								B. Leptospirosis (Comparative Analysis)
+							</p>
+							<img src="images/hypo_socio_fig3.png" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<ul>
+								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+									The visual dashboard provided distinct evidence to support the alternative hypothesis (H1).
+								</p>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Plot 1 (Heatmap):</b> A correlation heatmap revealed a strong positive correlation between Population Density and Leptospirosis Rate (r = 0.53), suggesting that crowded barangays had significantly higher rates. In contrast, it showed a negligible correlation with Relative Wealth (r = 0.06), indicating that income level is not a primary driver.
+									</p>
+								</li>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Plot 2 & 3 (Scatter Plots):</b> These plots confirmed the unique nature of this disease. The scatter plot for density (Plot 3) showed a sharp upward-sloping trend, visually demonstrating that infection rates climb steeply as neighborhoods become more crowded. The plot for wealth (Plot 2) showed a flat trend line, indicating that the disease burden is shared relatively equally across both rich and poor communities.
+									</p>
+								</li>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Plot 4 (Box Plot):</b> The analysis of healthcare access revealed a persistent vulnerability. Barangays with zero health facilities had a notably higher median disease rate compared to those with better coverage, suggesting that even though the disease affects all income levels, communities with no immediate access to care suffer a higher burden of reported cases.
+									</p>
+								</li>
+							</ul>
+
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								C. Typhoid Fever (Comparative Analysis)
+							</p>
+							<img src="images/hypo_socio_fig2.png" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<ul>
+								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+									The visual dashboard provided limited evidence for the alternative hypothesis (H1), suggesting that Typhoid vulnerability is not strongly driven by broad socioeconomic factors.
+								</p>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Plot 1 (Heatmap):</b> A correlation heatmap revealed near-zero correlations for both Relative Wealth (r = 0.00) and Population Density (r = -0.06). This suggests that unlike Dengue or Leptospirosis, Typhoid outbreaks do not follow clear spatial patterns of poverty or crowding.
+									</p>
+								</li>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Plot 2 & 3 (Scatter Plots):</b> These plots visually depicted the lack of correlation. The scatter plots for both wealth (Plot 2) and density (Plot 3) showed flat trend lines with data points scattered randomly. This indicates that high and low infection rates are found sporadically across all types of barangays, regardless of their economic status or population size.
+									</p>
+								</li>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Plot 4 (Box Plot):</b> The analysis of healthcare access revealed no distinct pattern. The median disease rates remained relatively consistent across barangays regardless of the number of health facilities, reinforcing the conclusion that Typhoid risk in this city is likely driven by point-source factors (such as specific contaminated water or food sources) rather than systemic socioeconomic lack.
 									</p>
 								</li>
 							</ul>
@@ -744,16 +797,30 @@
 
 							<h4 style="text-align:left;">Conclusion & Discussion</h4>
 							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-								<b>Based on the statistical evidence, we reject the null hypothesis (H0).</b>
+								<b>Based on the statistical evidence, we reject the null hypothesis (H0) for Dengue Fever and Leptospirosis, but fail to reject it for Typhoid Fever.</b>
 							</p>
 							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-								The analysis provides strong quantitative support for the alternative hypothesis (H1). The burden of dengue in Cagayan de Oro is not random but is significantly linked to socioeconomic conditions.
+								The analysis demonstrates that vulnerability to climate-sensitive diseases in Cagayan de Oro is not uniform; rather, it is highly dependent on the specific disease vector and its interaction with the urban environment.
 							</p>
+							<ol>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Dengue Fever is a disease of poverty.</b> We found that relative wealth is a dominant protective factor (r = -0.46, p = 0.0003). Poorer barangays likely lack the housing quality (screens, sealed walls) and reliable infrastructure (piped water, waste management) needed to prevent mosquito breeding.
+									</p>
+								</li>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Leptospirosis is a disease of crowding.</b> Its strong correlation with density (r = 0.53) but not wealth suggests that flood risk and urban congestion drive transmission more than household income.
+									</p>
+								</li>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										<b>Typhoid Fever follows a different pattern.</b> The lack of socioeconomic correlation (r ≅ 0) suggests its transmission is likely driven by point-source contamination (e.g., specific water sources or food vendors) that affects communities regardless of their wealth or density.
+									</p>
+								</li>
+							</ol>
 							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-								We found that <b>relative wealth</b> and <b>population density</b> are two of the most significant drivers of dengue vulnerability. Barangays that are poorer and more crowded face a statistically higher risk. 
-							</p>
-							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-								While the visual plot for healthcare access was compelling, its lack of statistical significance in the final model suggests that the effects of poverty and density are more dominant. Future research could explore access in different ways, such as travel time to the nearest facility rather than just the count within the barangay.
+								In conclusion, socioeconomic factors significantly affect disease vulnerability, but the specific drivers—wealth versus density—vary by disease. Effective public health interventions in Cagayan de Oro must be targeted accordingly: focusing on <b>poverty alleviation and housing</b> for Dengue, <b>urban decongestion and flood control</b> for Leptospirosis, and <b>city-wide water safety</b> for Typhoid.
 							</p>
 						</template>
 						

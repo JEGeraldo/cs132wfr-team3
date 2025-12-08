@@ -206,20 +206,25 @@
 								Climate atmospheric variables, specifically heat index and estimated rainfall, were analyzed to assess their influence on the climate-sensitive disease, dengue. The effects of these variables are depicted in the graphs, with all values normalized to facilitate clearer visualization and comparison alongside dengue case trends.
 							</p>
 							<p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
-								The recorded temperature and heat index data reveal clear seasonal fluctuations typical of the Philippines' climate. A noticeable pattern emerges from 2014 to 2020, where spikes in temperature are consistently followed by corresponding increases in dengue cases. This suggests a potential lagged relationship between rising temperatures and dengue incidence. However, after 2020, this pattern appears to diminish as dengue cases level off and no longer show the same responsiveness to temperature changes. This disruption likely coincides with the onset of the COVID-19 pandemic, which may have influenced reporting, human behavior, or other factors affecting dengue transmission, thereby interrupting the previously observed seasonal trend.
+								The recorded temperature and heat index data reveal clear seasonal fluctuations typical of the Philippines' climate. A noticeable pattern emerges from 2014 to 2020, where <b>spikes in temperature are consistently followed by corresponding increases in dengue cases</b>. This suggests <b>a potential lagged relationship between rising temperatures and dengue incidence</b>. However, after 2020, this pattern appears to diminish as dengue cases level off and no longer show the same responsiveness to temperature changes. This disruption likely coincides with the onset of the COVID-19 pandemic, which may have influenced reporting, human behavior, or other factors affecting dengue transmission, thereby interrupting the previously observed seasonal trend.
 							</p>
 							<p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
-								A similar seasonal fluctuation can be observed with estimated rainfall, aligning with the Philippines' characteristic wet and dry seasons. Notably, the intensity of rainfall events appears to increase over the years, with more pronounced spikes in recent periods. Like temperature, increases in rainfall often precede or coincide with rises in dengue cases. Additionally, the disruption in dengue case patterns during the COVID-19 pandemic is also evident in the rainfall graph.
+								A similar seasonal fluctuation can be observed with estimated rainfall, aligning with the Philippines' characteristic wet and dry seasons. Notably, the intensity of rainfall events appears to increase over the years, with more pronounced spikes in recent periods. Like temperature, <b>increases in rainfall often precede or coincide with rises in dengue cases</b>. Additionally, the disruption in dengue case patterns during the COVID-19 pandemic is also evident in the rainfall graph.
 							</p>
 
 							<img src="images/climate_fig2.png" alt="" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
 							<p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
-								To gain a deeper insight into the impact of these variables, we examined the correlation between each climate variable and dengue cases. Using Pearson correlation to assess pairwise relationships on data from 2014 to 2022, none of the climate variables exhibited a strong linear correlation with dengue cases. Even if we account for lagging with the incidence, it only resulted in approximately moderate linear correlations between variables.
+								The study earlier identified that a <b>25-week lag</b> yielded the strongest associations with dengue incidence for Metro Manila (Carvajal et. al, 2018). However upon doing prelimenary analysis by trial and error, a <b>10-week lag</b> yielded the best association for Cagayan de Oro. 
 							</p>
 
-							<img src="images/climate_fig3.png" alt="" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<img src="images/climate_fig4.png" alt="" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
 							<p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
-								Even if we do limit the data range from 2014 to 2020, pre-COVID19 pandemic, results were better but still resulted with showing approximately moderate linear correlation between variables.
+								In the case of leptospirosis incidence, no apparent trends are visible, compared to dengue incidence.
+							</p>
+
+							<img src="images/climate_fig7.png" alt="" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
+								Similarly, no apparent trends are visible yet with typhoid incidence, compared to dengue incidence.	
 							</p>
                         </template>
 
@@ -237,7 +242,7 @@
                         </template>
 
                         <template id="tpl-socio">
-							<img src="images/socio_fig1.png" alt="" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<img src="images/hypo_socio_fig1.png" alt="" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
                             <p style="text-align:justify; text-indent:1.2em;margin-bottom:0.9rem;">
 								In plot 1, We see a moderate negative correlation between Dengue Rate and Relative Wealth. This is a significant finding: in Cagayan de Oro, poorer barangays do tend to have higher rates of dengue. We also see a positive correlation with Population Density and a negative correlation with Health Facilities.
 							</p>
@@ -336,6 +341,120 @@
 
 					<!-- hidden templates for hypothesis details -->
 					<div id="hypo-templates" style="display:none;">
+						<template id="tpl-hypo-climate">
+							<h4 style="text-align:left;">Research Question and Hypotheses</h4>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								For this analysis, we sought to answer “How do climate variables (e.g., temperature, rainfall, humidity) influence the incidence of climate-sensitive diseases such as dengue, leptospirosis, and typhoid in selected Philippine cities?”
+							</p>
+							<ul>
+								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+									We tested the following hypotheses for different diseases in Cagayan de Oro:
+								</p>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										H<sub>0</sub>: Climate variables have no significant effect on the incidence of climate-sensitive diseases
+									</p>
+								</li>
+								<li>
+									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+										H<sub>1</sub>: Climate variables significantly influence the incidence of climate-sensitive diseases in Philippine cities
+									</p>
+								</li>
+							</ul>
+							
+							<h4 style="text-align:left;">Methodology</h4>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								To test these hypotheses, we draw on the CChain Open Data database to construct a cross-sectional dataset covering 77 barangays in Cagayan de Oro City. Our analysis includes (1) running separate linear regressions for each variable and (2) estimating a multiple linear regression (OLS) model incorporating all climate variables.
+							</p>
+
+							<h4 style="text-align:left;">Visual Analysis Findings</h4>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								With the preliminary EDA earlier, we have observed trends on dengue incidence vs. climate variables. However, no apparent trends are visible for the other diseases. As such, we will be implementing a <b>10-week lag</b> to dengue incidence and see if there is any effect to other diseases as well.
+							</p>
+
+							<h4 style="text-align:left;">Statistical Hypothesis Test Results</h4>
+							<img src="images/climate_fig2.png" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								In line with previous research, introducing time lagging to our model did improve the most of the correlation values between climate variables and dengue incidence. However, <b>temperature-related variables and rainfall estimates showed weak positive correlation</b> while <b>water vapor pressure showed weak negative correlation</b>. This suggests that <b>these climate variables alone are not the cause of dengue incidence</b>. Furthermore, water vapor pressure showed weaker correlation when introduced with time lagging. This suggests that <b>no time lagging is required for water vapor pressure</b>.
+							</p>
+
+							<img src="images/climate_fig3.png" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								Even if we take into account the pandemic, it did improve the said variables, but still only showed <b>weak correlation with dengue incidence</b>.
+							</p>
+
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								Since temperature, heat index, rainfall estimates, and water vapor pressure showed statistically significant correlation, we will be using these variables for OLS. However, since time lagging is ineffective for water vapor pressure, we will not be using OLS on water vapor pressure alongside the other variables. For comparison, we will be showcasing results between four types of models: 2014-2022 model, 2014-2020 model, lagged 2014-2022 model, and lagged 2014-2020 model:
+							</p>
+
+							<table>
+								<tr>
+									<th></th>
+									<th>2014-2022</th>
+									<th>2014-2020</th>
+									<th>L 2014-2022</th>
+									<th>L 2014-2020</th>
+								</tr>
+								<tr>
+									<td>R-squared</td>
+									<td>0.179</td>
+									<td>0.247</td>
+									<td>0.164</td>
+									<td>0.240</td>
+								</tr>
+								<tr>
+									<td>Adj. R-squared</td>
+									<td>0.174</td>
+									<td>0.241</td>
+									<td>0.159</td>
+									<td>0.233</td>
+								</tr>
+								<tr>
+									<td>F-statistic</td>
+									<td>33.74</td>
+									<td>39.44</td>
+									<td>29.78</td>
+									<td>36.83</td>
+								</tr>
+								<tr>
+									<td>P-value</td>
+									<td>9.68e-20</td>
+									<td>4.65e-22</td>
+									<td>1.36e-17</td>
+									<td>1.05e-20</td>
+								</tr>
+							</table>
+
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								As listed above, all models are <b>highly significant</b>. Which means that at least one or more of the variables are significant, with <b>average temperatures affecting dengue incidence greatly</b>. However, the amount of variation varies between models. With a p-value of 0.05, <b>all variables are significant in all models except for rainfall with 2014-2022 model</b>. Furthermore, this model only accounts for <b>about 20% of the variation of dengue incidence</b>.
+							</p>
+
+							<img src="images/climate_fig5.png" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								For leptospirosis, <b>climate variables did not present a significant level of correlation with leptospirosis incidence</b>.
+							</p>
+
+							<img src="images/climate_fig6.png" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								The same happens even if we limit the data before the pandemic. Since no correlation was found, there is no need to run OLS.
+							</p>
+
+							<img src="images/climate_fig8.png" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								Similarly, <b>climate variables did not present a significant level of correlation with typhoid incidence</b>.
+							</p>
+
+							<img src="images/climate_fig9.png" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								The same happens even if we limit the data before the pandemic. Since no correlation was found, there is no need to run OLS.
+							</p>
+
+							<h4 style="text-align:left;">Conclusion & Discussion</h4>
+							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+								In conclusion and based on statistical evidence, we <b>reject the null hypothesis for dengue incidence</b> but <b>accept the null hypothesis for leptospirosis and typhoid incidence</b>. This means that only dengue incidence is affected by climate variables. However, this only accounts for <b>20% of the variance</b>. This suggests that there is more at play here, other than climate variables.
+							</p>
+						</template>
+						
 						<template id="tpl-hypo-envi">
 							<h4 style="text-align:left;">Research Question and Hypotheses</h4>
 							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
@@ -531,110 +650,6 @@
 							</p>
 							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
 								Thus, this exploratory analysis for this specific research question suggests that landslide-prone terrain may be a useful environmental indicator for identifying populations at higher risk for dengue. Future research by the group or other groups may incorporate multi-year disease incidence average, disease incidence of different barangays of different cities for a barangay-level analysis, or include more cities in the correlation analysis that was done for this research question.
-							</p>
-						</template>
-
-						<template id="tpl-hypo-socio">
-							<h4 style="text-align:left;">Research Question and Hypotheses</h4>
-							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-								This analysis sought to answer the following research question: "How do socioeconomic factors (e.g., population density, relative wealth, and access to healthcare facilities) affect vulnerability to climate-sensitive diseases?"
-							</p>
-							<ul>
-								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-									We tested the following hypotheses for Dengue Fever in Cagayan de Oro:
-								</p>
-								<li>
-									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										H<sub>0</sub>: Socioeconomic indicators (wealth, population density, health access) do not affect disease vulnerability.
-									</p>
-								</li>
-								<li>
-									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										H<sub>1</sub>: Socioeconomic factors significantly affect disease incidence, with poorer and more densely populated areas experiencing a higher burden.
-									</p>
-								</li>
-							</ul>
-							
-							<h4 style="text-align:left;">Methodology</h4>
-							<ul>
-								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-									To test these hypotheses, we created a cross-sectional dataset of 77 barangays in Cagayan de Oro City. We aggregated data from 2014 to 2022 to create an average profile for each barangay, including:
-								</p>
-								<li>
-									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Dependent Variable:</b> Average Annual Dengue Rate per 100,000 people
-									</p>
-								</li>
-								<li>
-									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Independent variables:</b> Mean Relative Wealth Index (RWI), mean Population Density, and mean count of DOH-registered Health Facilities.
-									</p>
-								</li>
-							</ul>
-							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-								The analysis involved two stages: (1) A visual analysis using scatter plots and box plots to identify trends, and (2) a formal hypothesis test using a multiple linear regression (OLS) model.
-							</p>
-
-							<h4 style="text-align:left;">Visual Analysis Findings</h4>
-							<img src="images/hypo_socio_fig1.png" style="max-width:100%; height:auto; display:block; margin:0 auto 1rem; border:1px solid #eee; padding:4px;" />
-							<ul>
-								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-									The visual dashboard provided initial evidence to support the alternative hypothesis (H<sub>1</sub>).
-								</p>
-								<li>
-									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Plot 1 (Heatmap):</b> A correlation heatmap revealed a <b>moderate negative correlation</b> between Relative Wealth and Dengue Rate, suggesting poorer barangays had higher rates. It also showed a <b>weak positive correlation</b> with Population Density.
-									</p>
-								</li>
-								<li>
-									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Plot 2 & 3 (Scatter Plots):</b> These plots confirmed the trends. The scatter plot for wealth (Plot 2) showed a clear downward-sloping trend line, indicating lower rates in wealthier barangays. The plot for density (Plot 3) showed an upward-sloping trend, indicating higher rates in more crowded areas. Each dot on these plots represented a single barangay.
-									</p>
-								</li>
-								<li>
-									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Plot 4 (Box Plot):</b> The analysis of healthcare access revealed a non-linear pattern. Barangays with <b>zero</b> health facilities had a visibly higher median dengue rate than those with one or more, suggesting that a complete lack of access is a significant vulnerability.
-									</p>
-								</li>
-							</ul>
-
-							<h4 style="text-align:left;">Statistical Hypothesis Test Results</h4>
-							<ul>
-								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-									A multiple linear regression was performed to determine if these visual trends were statistically significant. The overall model was significant (F-statistic = 6.546, p = 0.000555) and explained 21.2% of the variance in dengue rates (R-squared = 0.212).
-								</p>
-								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-									The individual factor results are as follows:
-								</p>
-								<li>
-									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Relative Wealth (RWI):</b> This was a <b>highly significant</b> predictor (p = 0.0003). The negative coefficient confirms that as a barangay's average wealth increases, its dengue rate significantly <i>decreases</i>. This finding <b>strongly supports H<sub>1</sub></b>.
-									</p>
-								</li>
-								<li>
-									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Population Density:</b> This was also a <b>highly significant</b> predictor (p = 0.0001). The positive coefficient confirms that as a barangay's population density increases, its dengue rate significantly <i>increases</i>. This finding <b>also strongly supports H<sub>1</sub></b>.
-									</p>
-								</li>
-								<li>
-									<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-										<b>Healthcare Access:</b> This factor's p-value (p = 0.063) was just above the 0.05 threshold for significance. This indicates that once the powerful effects of wealth and density are accounted for, the <i>number</i> of health facilities was not a statistically significant predictor in this specific model.
-									</p>
-								</li>
-							</ul>
-
-							<h4 style="text-align:left;">Conclusion & Discussion</h4>
-							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-								<b>Based on the statistical evidence, we reject the null hypothesis (H0).</b>
-							</p>
-							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-								The analysis provides strong quantitative support for the alternative hypothesis (H1). The burden of dengue in Cagayan de Oro is not random but is significantly linked to socioeconomic conditions.
-							</p>
-							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-								We found that <b>relative wealth</b> and <b>population density</b> are two of the most significant drivers of dengue vulnerability. Barangays that are poorer and more crowded face a statistically higher risk. 
-							</p>
-							<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
-								While the visual plot for healthcare access was compelling, its lack of statistical significance in the final model suggests that the effects of poverty and density are more dominant. Future research could explore access in different ways, such as travel time to the nearest facility rather than just the count within the barangay.
 							</p>
 						</template>
 

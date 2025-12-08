@@ -98,13 +98,16 @@
 					<header>
 						<h2>We sourced our data from the CChain Open Data Repository</h2>
 						<p>The CChain Open Data project, hosted by Thinking Machines, provides publicly accessible datasets to support research in public health, with a particular focus on understanding the causes of diseases. The datasets are aggregated from a variety of sources such as government health reports, research studies, and healthcare surveys. They include information on disease prevalence, risk factors, demographic data, and environmental variables.</p>
+						<br>
+						<p> As such, this project uses the CCHAIN Open Data Repository to analyze dengue, leptospirosis, and typhoid incidences in Cagayan de Oro in relation to climate, environmental, and socioeconomic factors.</p>
 						
 						<hr>
 
 						<p>
 							Studies have demonstrated that incorporating the delayed effects of weather variables can substantially improve model performance compared with non-lagged approaches, with lagged datasets often yielding the highest predictive accuracy. In the study by Carvajal et al. conducted in Metropolitan Manila, Philippines, a <b>25-week lag</b> was identified as having the strongest association with dengue incidence. This reinforces the idea that integrating appropriate time lags into modeling frameworks can meaningfully enhance predictive capability by capturing underlying temporal dependencies.
 						</p>
-						<p>
+						<br>
+						<p style="text-align:justify; margin-bottom:0.9rem;">
 							Carvajal, T. M., Viacrusis, K. M., Hernandez, L. F., Ho, H. T., Amalin, D. M., & Watanabe, K. (2018). Machine learning methods reveal the temporal pattern of dengue incidence using meteorological factors in Metropolitan Manila, Philippines. BMC Infectious Diseases, 18(1). https://doi.org/10.1186/s12879-018-3066-0 
 						</p>
 					</header>
@@ -881,22 +884,72 @@
 							</div>
 						</div>
 					</div>
-
-					<footer>
-						<p>Want to learn more? Take a look at our source codes.</p>
-						<a href="https://github.com/JEGeraldo/cs132wfr-team3/tree/main" class="button large scrolly">Github Repo</a>
-					</footer>
 				</div>
 			</article>
 
-		<!-- Team -->
-			<article id="team" class="wrapper style4">
-				<div class="container medium">
-					<header>
-						<h2>We'd like to hear from you.</h2>
-						<p>We are University of the Philippines Diliman BS in Computer Science Undergraduates of class CS 132 WFR Introduction Data Science AY25-26 S1 under Sir Carlo Raquel.</p>
-					</header>
-					<div class="row">
+		<!-- Conclusion & Call to Action -->
+            <article id="conclusion" class="wrapper style2">
+                <div class="container">
+                    <header>
+                        <h2>Conclusions and Next Steps</h2>
+						<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+							By looking at the hypothesis testing of all 4 of the research questions, the group has examined how climate, environmental hazards, and socioeconomic conditions shape vulnerability to climate-sensitive diseases in Philippine cities and barangays by using the open-source database of the Project CChain dataset. Across all the analyses given, a consistent theme emerged: no single factor can fully explain disease patterns, but combining multiple indicators can explain the bigger picture of disease risks in the Philippines.
+						</p>
+						<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+							For Research Question 1, the analysis shows that typhoid fever and leptospirosis are not significantly influenced by climate variables. In contrast, dengue incidence is sensitive to temperature, heat index, rainfall, and is inversely related to water vapor pressure. While these factors help explain dengue trends, the model accounts for only about 20% of its variation, indicating that climate alone cannot fully predict dengue cases. Other influences—such as environmental conditions, population density, public health systems, and human behavior—also play important roles.
+						</p>
+						<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+							For Research Question 2 which tackles the relationship between disease cases and environmental hazards, the results showed that flood-prone areas do not reliably correspond to higher disease incidence across cities. In contrast, landslide-prone terrain shows a somewhat strong positive association with dengue incidence. This suggests that topography-linked environmental conditions like poor drainage, heavy rainfall, and dense vegetation- may create favorable mosquito habitats. This observation calls for the importance of examining hazard types individually, rather than assuming all hazards (like rainfall hazards or landslide hazards) behave similarly.
+						</p>
+						<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+							Research Question 3, which seeks to solve how socioeconomic factors like population density, relative wealth, and access to health care facilities, are related to disease cases. From the analysis of the group, socioeconomic patterns varied sharply by disease. Dengue rates were significantly higher in poorer and more densely populated barangays, indicating that housing quality, infrastructure, and crowding are key determinants. Moving on to leptospirosis cases, the disease showed the strongest relationship with population density, which is connected to flooding and congested urban environments. Typhoid fever, however, did not correlate meaningfully with wealth, density, or healthcare access. This implies that point-source contamination events and not broad structural conditions are the main drivers of disease outbreaks. These results emphasize that socioeconomic vulnerability is disease-specific and must be interpreted within the context of each pathogen's transmission characteristics more deeply.
+						</p>
+						<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+							For the last research question, combining environmental and socioeconomic indicators into a composite risk score has a more general view of outbreak vulnerability, but the predictive strength was not too strong. The scatter plot shows a weak overall trend, this suggests that a simple unweighted composite score cannot fully capture the complexity of disease dynamics. In the correlation heatmap, however, it is revealed that certain indicators such as building density and hazard exposure are substantially more associated with disease incidence than others.
+						</p>
+						<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+							The findings show that disease vulnerability in the Philippines is complex and multidimensional. Environmental factors and hazards, socioeconomic conditions, and other indicators each contribute in different ways depending on the disease. The group only studied dengue, leptospirosis and typhoid, but the group acknowledges that there are more diseases that need to be covered to potentially paint the bigger picture of disease cases in the Philippines.
+						</p>
+                    </header>
+
+                    <div class="row aln-center">
+                        <div class="col-12 col-12-medium">
+                            <section class="box style1">
+                                <h3>Call to Action</h3>
+                                <p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+									Given the multidimensional nature of climate-sensitive disease vulnerability that was ultimately revealed in this data science project, we call for local governments and public health agencies to adopt targeted, indicator-specific interventions rather than a one-size-fits all approach.
+								</p>
+								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+									For instance, for dengue, efforts by the government should be put into housing quality, drainage systems, waste management, and landslide hazard controls and waste management, especially for lower-income and densely populated barangays, wherein their conditions may be suitable for mosquito breeding. For leptospirosis, the group calls for investments in urban planning, flood mitigation, and road and canal maintenance. This is especially more urgent now, especially in the midst of the recent flood control scandals that have claimed countless Filipino lives. Lastly, for typhoid prevention the group calls for the focus on consistent water quality monitoring and food safety regulation.
+								</p>
+								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+									Additionally, the results show the need for an integrated, multi-indicator surveillance system that combines hazard mapping, urban density metrics, socioeconomic information, and climate data to support early warning systems and resource allocation. Future work should develop weighted or model-driven risk scoring systems that accurately reflect the weighted contributions of environmental and socioeconomic factors.
+								</p>
+								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+									Moreover, the group would also like to expand the datasets to include more cities, more recent data, and multi-year health outcomes for finer spatial resolution to strengthen predictive capacity. For instance, the dataset does not include disease cases aggregated for each barangay. Rather, the disease cases were aggregated in a weekly manner for the whole city. It would’ve been more comprehensive and informative if there were readily available health data for disease at the barangay level so that the group can study individually the relationship of different factors to disease cases in the barangay level.
+								</p>
+								<p style="text-align:justify; text-indent:1.2em; margin-bottom:0.9rem;">
+									With those recommendations, the group believes that by acting on those insights, policymakers and communities can adapt a proactive and data-informed approach to mitigate the impact of climate-sensitive diseases in the Philippines for the future years to come.
+								</p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+				<footer>
+					<p>Want to learn more? Take a look at our source codes.</p>
+					<a href="https://github.com/JEGeraldo/cs132wfr-team3/tree/main" class="button large scrolly">Github Repo</a>
+				</footer>
+            </article>
+
+            <!-- Team -->
+            <article id="team" class="wrapper style4">
+                <div class="container medium">
+                    <header>
+                        <h2>We'd like to hear from you.</h2>
+                        <p>We are University of the Philippines Diliman BS in Computer Science Undergraduates of class CS 132 WFR Introduction Data Science AY25-26 S1 under Sir Carlo Raquel.</p>
+                    </header>
+                    <div class="row">
 						<div class="col-12">
 							<form method="post" action="#">
 								<div class="row">
@@ -997,7 +1050,7 @@
                     if (tplKey) {
                         var tpl = document.getElementById('tpl-' + tplKey);
                         if (tpl && tpl.content) {
-                            $content.html('');
+                            $content.html(''); 
                             $content.append($(tpl.content.cloneNode(true)));
                         } else {
                             $content.html('<p>' + $('<div>').text(desc).html() + '</p>');
@@ -1075,7 +1128,7 @@
 					if (tplKey) {
 						var tpl = document.getElementById('tpl-' + tplKey);
 						if (tpl && tpl.content) {
-							$content.html('');
+							$content.html(''); 
 							$content.append($(tpl.content.cloneNode(true)));
 						} else {
 							var desc = $box.find('p').text().trim();
